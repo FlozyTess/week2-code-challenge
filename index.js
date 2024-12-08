@@ -16,11 +16,15 @@ addButton.addEventListener('click',() => {
 }
 });
 //renders the shopping list
-function renderList(){
+function renderList() {
     shoppingList.innerHTML = '';
     items.forEach((item, index) => {
     const listItem = document.createElement('li');
     listItem.textContent = item.name;
+    //mark purchased
+    if (item.purchased) {
+    listItem.classList.add('purchased');
+    }
     })
 
 }
