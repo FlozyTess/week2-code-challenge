@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 header{
     background-color: forestgreen;
     color: white;
@@ -6,12 +12,11 @@ header{
     position: relative;
 }
 header h1{
-
-}
-body{
-   
-   font-family: Arial,sans-serif;
-   margin: 0;
-   padding:0 ;
-   background-color: #f4f4f9;  
+     margin: 0;
+     font-family: Arial,sans-serif; 
+     font-size: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;  
+     gap: 10px; 
 }
