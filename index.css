@@ -27,7 +27,16 @@ header h1{
 .input-section{
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 15px;
         justify-content: center;
         margin-bottom: 20px;
+}
+#item-input{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #388e3c;
+    border-radius: 8px;
+    width: 250px;
+    max-width: 100%;
+    outline: none;
 }
