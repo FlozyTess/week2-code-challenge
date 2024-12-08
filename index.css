@@ -4,6 +4,14 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
+body{
+    background-color: antiquewhite;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 header{
     background-color: forestgreen;
     color: white;
