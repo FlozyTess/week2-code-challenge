@@ -19,8 +19,15 @@ header{
     position: relative;
 }
 header h1{
-    font-size: 30px;
+    font-size: 36px;
     color: #f1f8e9;
     margin-bottom: 10px;  
      gap: 10px; 
+}
+.input-section{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
 }
