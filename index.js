@@ -12,6 +12,15 @@ addButton.addEventListener('click',() => {
     const item = {name: itemName, purchased: false };
     items.push(item);
     renderList();
-    itemInput.value='';
+    itemInput.value=''; //clears the input field
 }
 });
+//renders the shopping list
+function renderList(){
+    shoppingList.innerHTML = '';
+    items.forEach((item, index) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = item.name;
+    })
+
+}
