@@ -32,6 +32,13 @@ function renderList() {
     item.purchased = !item.purchased;    
     renderList();
     });
+    // Add "Delete" button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent='Delete';
+    deleteButton.addEventListener('click', () => {
+        items.splice(index, 1);
+        renderList();
+      });
     })
 
 }
