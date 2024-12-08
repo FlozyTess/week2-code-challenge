@@ -56,3 +56,6 @@ header h1{
     flex-shrink: 0;
     margin-top: 25px;
 }
+#add-button:hover, #clear-button:hover {
+    background-color: #2c6b2f;
+}
