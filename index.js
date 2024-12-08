@@ -38,7 +38,10 @@ function renderList() {
     deleteButton.addEventListener('click', () => {
         items.splice(index, 1);
         renderList();
-      });
-    })
-
+    });
+    // Append buttons and item
+    listItem.appendChild(purchaseButton);
+    listItem.appendChild(deleteButton);
+    shoppingList.appendChild(listItem);
+    });
 }
