@@ -5,9 +5,8 @@
     font-family: 'Arial', sans-serif;
 }
 body{
-    background-color: antiquewhite;
-    color: black;
-    display: flex;
+    background-color: #f1f8e9;
+    color: #2e7d32;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -20,11 +19,8 @@ header{
     position: relative;
 }
 header h1{
-     margin: 0;
-     font-family: Arial,sans-serif; 
-     font-size: 30px;
-     display: flex;
-     align-items: center;
-     justify-content: center;  
+    font-size: 30px;
+    color: #f1f8e9;
+    margin-bottom: 10px;  
      gap: 10px; 
 }
