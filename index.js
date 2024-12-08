@@ -25,6 +25,13 @@ function renderList() {
     if (item.purchased) {
     listItem.classList.add('purchased');
     }
+    //add markPurchased button
+    const purchaseButton = document.createElement('button');
+    purchaseButton.textContent = item.purchased ? 'Unmark' : 'Mark Purchased';
+    purchaseButton.addEventListener('click', () =>{
+    item.purchased = !item.purchased;    
+    renderList();
+    });
     })
 
 }
