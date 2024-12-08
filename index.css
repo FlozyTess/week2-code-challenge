@@ -57,5 +57,8 @@ header h1{
     margin-top: 25px;
 }
 #add-button:hover, #clear-button:hover {
-    background-color: #2c6b2f;
+    background-color: mediumspringgreen;
+}
+#clear-button {
+    background-color:  #2c6b2f;
 }
