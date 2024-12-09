@@ -30,15 +30,43 @@ function renderList() {
     const purchaseButton = document.createElement('button');
     purchaseButton.textContent = item.purchased ? 'Unmark' : 'Mark Purchased';
     purchaseButton.addEventListener('click', () =>{
-    item.purchased = !item.purchased;    
+    item.purchased = !item.purchased;
+    saveToLocalStorage();    
     renderList();
     });
     // Add "Delete" button
     const deleteButton = document.createElement('button');
     deleteButton.textContent='Delete';
     deleteButton.addEventListener('click', () => {
-        items.splice(index, 1);
-        renderList();
+    items.splice(index, 1);
+    saveToLocalStorage();
+    renderList();
+    });
+    // Edit Button
+    const editButton = document.createElement('button');
+    editButton.textContent = 'Edit';
+    editButton.addEventListener('click', () => {
+        const inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.value = item.name;
+
+        const saveButton = document.createElement('button');
+        saveButton.textContent = 'Save';
+
+        // Replace item with input field and save button
+        listItem.innerHTML = '';
+        listItem.appendChild(inputField);
+        listItem.appendChild(saveButton);
+
+        // Save the edited item
+        saveButton.addEventListener('click', () => {
+            const newName = inputField.value.trim();
+            if (newName) {
+                item.name = newName;
+                saveToLocalStorage(); // Persist changes
+                renderList(items);
+            }
+        });
     });
     // Append buttons and item
     listItem.appendChild(purchaseButton);
