@@ -8,14 +8,14 @@ const searchBar=document.getElementById('search-bar');
 let items=[];
 //save items to local storage
 function saveToLocalStorage() {
-    localStorage.setItem('shoppingList'(items));
+    localStorage.setItem('shoppingList', JSON.stringify(items));
 }
 // Load from local storage when the page loads
 function loadFromLocalStorage() {
-    const storedItems = (localStorage.getItem('shoppingList'));
+    const storedItems = localStorage.getItem('shoppingList');
     if (storedItems) {
-        items = storedItems;
-        renderList(items); // Render loaded items
+        items =JSON.parse(storedItems);
+        renderList(); // Render loaded items
     }
 }
 document.addEventListener('DOMContentLoaded', loadFromLocalStorage);
@@ -26,7 +26,7 @@ addButton.addEventListener('click',() => {
     const item = {name: itemName, purchased: false };
     items.push(item);
     saveToLocalStorage();//saves to local storage 
-    renderList(items);//re-renders list
+    renderList();
     itemInput.value=''; //clears the input field
 }
 });
@@ -78,15 +78,15 @@ function renderList(listtoRender = items) {
             if (newName) {
                 item.name = newName;
                 saveToLocalStorage(); // Persist changes
-                renderList(items);
+                renderList();
             }
         });
     });
     // Append buttons and item
     listItem.appendChild(purchaseButton);
     listItem.appendChild(deleteButton);
-    shoppingList.appendChild(listItem);
     listItem.appendChild(editButton);
+    shoppingList.appendChild(listItem);
     });
 }
     //clear the list

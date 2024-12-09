@@ -1,2 +1,3 @@
-# Week2 Code Challenge
-# # Interactive Shopping List
+# Week2 Code Challenge | Shopping List
+
+# # Interactive 
