@@ -6,7 +6,18 @@ const shoppingList=document.getElementById('shopping-list');
 const searchBar=document.getElementById('search-bar');
 //array to store shopping list
 let items=[];
+//save items to local storage
+function saveToLocalStorage() {
+    localStorage.setItem('shoppingList'(items));
+}
 // Load from local storage when the page loads
+function loadFromLocalStorage() {
+    const storedItems = (localStorage.getItem('shoppingList'));
+    if (storedItems) {
+        items = storedItems;
+        renderList(items); // Render loaded items
+    }
+}
 document.addEventListener('DOMContentLoaded', loadFromLocalStorage);
 //add items to list
 addButton.addEventListener('click',() => {
@@ -14,14 +25,15 @@ addButton.addEventListener('click',() => {
  if (itemName){
     const item = {name: itemName, purchased: false };
     items.push(item);
-    renderList();
+    saveToLocalStorage();//saves to local storage 
+    renderList(items);//re-renders list
     itemInput.value=''; //clears the input field
 }
 });
 //renders the shopping list
-function renderList() {
+function renderList(listtoRender = items) {
     shoppingList.innerHTML = '';
-    items.forEach((item, index) => {
+    listtoRender.forEach((item, index) => {
     const listItem = document.createElement('li');
     listItem.textContent = item.name;
     //mark purchased
@@ -74,11 +86,13 @@ function renderList() {
     listItem.appendChild(purchaseButton);
     listItem.appendChild(deleteButton);
     shoppingList.appendChild(listItem);
+    listItem.appendChild(editButton);
     });
 }
     //clear the list
 clearButton.addEventListener('click',() => {
     items = [];
+    localStorage.removeItem('shoppingList');
     renderList();
 });
 // Search functionality
