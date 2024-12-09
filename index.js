@@ -3,6 +3,7 @@ const itemInput=document.getElementById('item-input');
 const addButton=document.getElementById('add-button');
 const clearButton=document.getElementById('clear-button');
 const shoppingList=document.getElementById('shopping-list');
+const searchBar=document.getElementById('search-bar');
 //array to store shopping list
 let items=[];
 //add items to list
@@ -45,7 +46,14 @@ function renderList() {
     shoppingList.appendChild(listItem);
     });
 }
+    //clear the list
 clearButton.addEventListener('click',() => {
     items = [];
     renderList();
+});
+// Search functionality
+searchBar.addEventListener('input', () => {
+    const searchTerm = searchBar.value.trim().toLowerCase();
+    const filteredItems = items.filter(item => item.name.toLowerCase().includes(searchTerm));
+    renderList(filteredItems); // Render only the filtered items
 });
