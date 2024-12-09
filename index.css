@@ -46,7 +46,7 @@ header h1{
 }
 #add-button, #clear-button {
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 20px;
     color: white;
     background-color: #388e3c;
     border: none;
@@ -83,4 +83,22 @@ footer {
 footer p {
     margin-bottom: 7px;
     color: #f1f8e9;
+}
+#search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #388e3c;
+    border-radius: 8px;
+    width: 250px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    outline: none;
+}
+
+#search-bar:focus {
+    border-color: #2e7d32;
+}
+.purchased {
+    text-decoration: line-through;
+    color: mediumturquoise;
 }

@@ -2,7 +2,7 @@
 const itemInput=document.getElementById('item-input');
 const addButton=document.getElementById('add-button');
 const clearButton=document.getElementById('clear-button');
-const shoppingList=docment.getElementById('shopping-list');
+const shoppingList=document.getElementById('shopping-list');
 //array to store shopping list
 let items=[];
 //add items to list
@@ -45,3 +45,7 @@ function renderList() {
     shoppingList.appendChild(listItem);
     });
 }
+clearButton.addEventListener('click',() => {
+    items = [];
+    renderList();
+});
