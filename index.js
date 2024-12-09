@@ -6,6 +6,8 @@ const shoppingList=document.getElementById('shopping-list');
 const searchBar=document.getElementById('search-bar');
 //array to store shopping list
 let items=[];
+// Load from local storage when the page loads
+document.addEventListener('DOMContentLoaded', loadFromLocalStorage);
 //add items to list
 addButton.addEventListener('click',() => {
     const itemName=itemInput.value.trim();
