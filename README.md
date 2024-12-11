@@ -14,7 +14,8 @@ A shopping list application that allows users to manage their shopping items. Th
 - NPM (Node Package Manager)
 ### Steps To Install
 1.	Clone the repository:
-   - git clone git@github.com:username/week2-code-challenge.git
+    ```bash
+    git clone git@github.com:username/week2-code-challenge.git
 
 2.	Navigate to the project folder:
    - cd project-name
