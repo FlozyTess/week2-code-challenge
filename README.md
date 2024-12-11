@@ -1,4 +1,4 @@
-# Week2 Code Challenge | Shopping List
+# DS SHOPPING LIST
 A shopping list application that allows users to manage their shopping items. The app allows users to add items to the list, mark items as purchased,clear the list and search for specific items.The list is saved in the browser's local storage.
 # Features
 - Add items to the shopping list.
